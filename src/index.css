@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+HU:wght@100..400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.font-playwrite {
+  font-family: "Playwrite HU", sans-serif;
+}
+:root {
+  --primary-white: #ffffff;
+  --primary-background: #f5f7ff;
+  --secondary-background: #e6eaf8;
+  --primary-text: #1e2749;
+  --secondary-text: #3a4674;
+  --primary-grey: #5d6b93;
+  --secondary-grey: #8794b8;
+
+  --primary-brand: #4a6cf7;
+  --secondary-brand: #6d7bff;
+
+  --success-color: #2ecc71;
+  --error-color: #ff4757;
+  --warning-color: #ffa700;
+  --info-color: #4a6cf7;
+}
+.dark:root {
+  --primary-white: #0f1729;
+  --primary-background: #162036;
+  --secondary-background: #1e2946;
+  --primary-text: #e6eaf8;
+  --secondary-text: #c2cae3;
+  --primary-grey: #7484a8;
+  --secondary-grey: #5d6b93;
+
+  --primary-brand: #6d7bff;
+  --secondary-brand: #8a97ff;
+
+  --success-color: #48dbfb;
+  --error-color: #ff6b6b;
+  --warning-color: #ffd700;
+  --info-color: #6d7bff;
+}
