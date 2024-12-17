@@ -86,14 +86,11 @@ const AvailableProducts = () => {
     <div className="bg-gray-200 pt-16 pb-20 px-5 ">
       <section className="container mx-auto ">
         <SectionTitle
-          title="Shop Products"
+          title="Products"
           description={`Browse all products in this shop`}
         />
         <div className="flex flex-1 flex-col">
-          <label
-            htmlFor="priceRange"
-            className="text-sm  font-medium"
-          >
+          <label htmlFor="priceRange" className="text-sm  font-medium">
             Price Range: ${filters.priceRange[0]} - ${filters.priceRange[1]}
           </label>
           <input
@@ -142,11 +139,7 @@ const AvailableProducts = () => {
           hasMore={hasMore}
           scrollThreshold={0.5}
           loader={<Spinner />}
-          endMessage={
-            <p className="text-center text-gray-500 mt-4">
-        
-            </p>
-          }
+          endMessage={<p className="text-center text-gray-500 mt-4"></p>}
           style={{ overflow: "hidden" }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -194,7 +187,7 @@ const AvailableProducts = () => {
                     ${product.price.toFixed(2)}
                   </span>
                   <span className="text-gray-400 line-through">
-                    {/* ${oldPrice.toFixed(2)} */}
+                    {product.discount && `$${product.price.toFixed(2)}`}
                   </span>
                 </div>
                 {/* CTA Buttons */}
@@ -204,31 +197,7 @@ const AvailableProducts = () => {
                 </div>
               </div>
             ))}
-            {/* {displayedProducts.map((product: any) => (
-              <div
-                key={product._id}
-                className="bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300 border border-gray-200"
-              >
-                <Link to={`/products/${product._id}`} className="block mb-4">
-                  <img
-                    src={product.images[0]}
-                    alt={product.name}
-                    className="w-full h-52 object-contain rounded-md bg-gray-100"
-                  />
-                </Link>
-                <h3 className="text-lg font-bold text-gray-800 mb-2 truncate">
-                  {product.name}
-                </h3>
-                <p className="text-green-600 font-semibold mb-4 text-lg">
-                  ${product.price}
-                </p>
-
-                <div className="flex justify-between gap-3">
-                  <AddToCartButton product={product} />
-                  <CompareButton product={product} />
-                </div>
-              </div>
-            ))} */}
+           
           </div>
         </InfiniteScroll>
       </section>

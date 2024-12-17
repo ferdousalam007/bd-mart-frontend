@@ -98,7 +98,7 @@ const Products = () => {
                     ).toFixed(2)}
                   </span>
                   <span className="text-gray-400 line-through">
-                    ${product.price.toFixed(2)}
+                    {product.discount && `$${product.price.toFixed(2)}`}
                   </span>
                 </div>
                 {/* CTA Buttons */}
@@ -107,31 +107,6 @@ const Products = () => {
                   <CompareButton product={product} />
                 </div>
               </div>
-              // <div
-              //   key={product._id}
-              //   className="relative bg-primary-background p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow ease-in duration-300"
-              // >
-              //   <img
-              //     src={product.images[0]}
-              //     alt={product.name}
-              //     className="w-full h-52 object-contain rounded-lg mb-4 bg-[rgba(109,123,255,0.2)]"
-              //   />
-              //   {product.discount > 0 && (
-              //     <div className="absolute top-4 right-4 bg-error-color   text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg">
-              //       {product.discount}% OFF
-              //     </div>
-              //   )}
-              //   <h3 className="text-lg font-bold text-primary-text mb-2">
-              //     {product.name}
-              //   </h3>
-              //   <p className="text-success-color font-semibold mb-4  text-lg">
-              //     ${product.price}
-              //   </p>
-              //   <div className="flex justify-between gap-3">
-              //     <AddToCartButton product={product} />
-              //     <CompareButton product={product} />
-              //   </div>
-              // </div>
             ))}
           </div>
         </section>
