@@ -1,8 +1,9 @@
 import { Outlet } from "react-router";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
 import React from "react";
-import NavigationMenu from "../../components/navigationMenu";
+import NavigationMenu from "../../components/NavigationMenu";
+// import NavigationMenu from "../../components/navigationMenu";
 
 const RootLayout = () => {
   return (

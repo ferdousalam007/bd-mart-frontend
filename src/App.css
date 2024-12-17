@@ -1,9 +1,9 @@
-.hero {
+.banner {
   background-image: linear-gradient(
-      rgba(30, 39, 73, 0.6),
-      rgba(30, 39, 73, 0.6)
+      rgba(5, 25, 99, 0.6),
+      rgba(72, 81, 112, 0.6)
     ),
-    url("/images/bg3.avif");
+    url("/images/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

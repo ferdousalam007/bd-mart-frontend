@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
 // import ThemeButton from "./ThemeButton";
@@ -8,6 +8,7 @@ import { useUserProfile } from "../hooks/users/useUserProfile";
 import { useLogout } from "../hooks/auth/useLogout";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { Link } from "react-router-dom";
 
 const NavigationMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,12 +55,13 @@ const NavigationMenu = () => {
       <header className="border-b bg-white">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold">
-              <img src={logo} alt="logo" className="h-10" />
-            </span>
-          </div>
-
+          <Link to="/">
+            <div className="flex items-center space-x-2">
+              <span className="text-xl font-bold">
+                <img src={logo} alt="logo" className="h-10" />
+              </span>
+            </div>
+          </Link>
           {/* Icons */}
           <div className="flex items-center space-x-6 text-gray-700">
             <div className="flex items-center space-x-2">
@@ -91,9 +93,8 @@ const NavigationMenu = () => {
                   </li>
                 </>
               )}
-              {
-              userProfile?.role === "vendor" && (
-               <button
+              {userProfile?.role === "vendor" && (
+                <button
                   onClick={() => logout()}
                   className={
                     "text-slate-800 transition duration-300 font-medium"
@@ -101,11 +102,9 @@ const NavigationMenu = () => {
                 >
                   Logout
                 </button>
-              )
-              }
-              {
-              userProfile?.role === "admin" && (
-               <button
+              )}
+              {userProfile?.role === "admin" && (
+                <button
                   onClick={() => logout()}
                   className={
                     "text-slate-800 transition duration-300 font-medium"
@@ -113,8 +112,7 @@ const NavigationMenu = () => {
                 >
                   Logout
                 </button>
-              )
-              }
+              )}
               {!userProfile && (
                 <NavLink
                   to="/login"

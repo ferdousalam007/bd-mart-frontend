@@ -83,8 +83,8 @@ const AvailableProducts = () => {
     );
 
   return (
-    <div className="bg-white py-10 lg:py-14 px-5 ">
-      <section className="container mx-auto border-b border-secondary-grey">
+    <div className="bg-gray-200 pt-16 pb-20 px-5 ">
+      <section className="container mx-auto ">
         <SectionTitle
           title="Shop Products"
           description={`Browse all products in this shop`}
@@ -144,16 +144,16 @@ const AvailableProducts = () => {
           loader={<Spinner />}
           endMessage={
             <p className="text-center text-gray-500 mt-4">
-              You have seen all products.
+        
             </p>
           }
           style={{ overflow: "hidden" }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {displayedProducts.map((product: any) => (
               <div
                 key={product._id}
-                className="border rounded-lg shadow-sm p-4 w-64 hover:shadow-lg transition duration-300 bg-white"
+                className="border rounded-lg shadow-sm p-4  hover:shadow-lg transition duration-300 bg-white"
               >
                 {/* Discount Badge */}
                 {product.discount && (

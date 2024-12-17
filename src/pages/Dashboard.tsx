@@ -7,12 +7,12 @@ import SectionTitle from "../components/SectionTitle";
 import { useUpdateShop } from "../hooks/shops/useUpdateShop";
 import StatsCard from "../components/StatsCard";
 import { RxCross2 } from "react-icons/rx";
-import {
-  FaCar,
-  FaClipboardList,
-  FaHourglassHalf,
-  FaMoneyBillWave,
-} from "react-icons/fa6";
+// import {
+//   FaCar,
+//   FaClipboardList,
+//   FaHourglassHalf,
+//   FaMoneyBillWave,
+// } from "react-icons/fa6";
 import api from "../services/api";
 import Dropzone from "react-dropzone";
 import axios from "axios";
@@ -109,36 +109,34 @@ const VendorShops = () => {
       {userProfile.role === "admin" ? (
         <div className="bg-primary-background">
           {/* Header */}
-          <SectionTitle title="Dashboard Overview" />
+          <SectionTitle title="Analitycs" />
           {/* Stats Section */}
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StatsCard
               title="Total Products"
               value={counts.productCount}
               textColor="text-primary-brand"
-              borderColor="border-primary-brand"
-              icon={<FaClipboardList size={30} />}
+      
             />
             <StatsCard
               title="Total Orders"
               value={counts.orderCount}
               textColor="text-success-color"
-              borderColor="border-success-color"
-              icon={<FaCar size={30} />}
+      
             />
             <StatsCard
               title="Total Earnings"
               value={`$${counts.totalEarning}`}
               textColor="text-error-color"
-              borderColor="border-error-color"
-              icon={<FaMoneyBillWave size={30} />}
+      
+           
             />
             <StatsCard
               title="Total Users"
               value={counts.userCount}
               textColor="text-warning-color"
-              borderColor="border-warning-color"
-              icon={<FaHourglassHalf size={30} />}
+            
+             
             />
           </section>
         </div>

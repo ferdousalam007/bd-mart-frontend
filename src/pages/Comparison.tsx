@@ -6,7 +6,7 @@ import SectionTitle from "../components/SectionTitle";
 
 const Comparison: React.FC = () => {
   const { products } = useSelector((state: RootState) => state.comparison);
-
+console.log(products);
   const dispatch = useDispatch();
 
   return (
@@ -31,6 +31,7 @@ const Comparison: React.FC = () => {
             </thead>
             <tbody>
               {[
+                { label: "image", key: "image" },
                 { label: "Description", key: "description" },
                 { label: "Price", key: "price", prefix: "$" },
                 { label: "Category", key: "category.name" },
@@ -49,9 +50,15 @@ const Comparison: React.FC = () => {
                         key={product._id}
                         className="p-4 text-secondary-text bg-primary-white"
                       >
-                        {prefix}
-                        {value}
-                        {suffix}
+                        {key === "image" ? ( //Check if it's the image key
+                          <img src={product.images[0]} alt={`${product.name} image`} /> //Render the image
+                        ) : (
+                          <>
+                            {prefix}
+                            {value}
+                            {suffix}
+                          </> //Render other values as before
+                        )}
                       </td>
                     );
                   })}
