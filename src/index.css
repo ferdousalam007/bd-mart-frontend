@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+HU:wght@100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.font-playwrite {
-  font-family: "Playwrite HU", sans-serif;
-}
+
 :root {
   --primary-white: #ffffff;
   --primary-background: #f5f7ff;
@@ -17,13 +15,13 @@ body {
   --primary-grey: #5d6b93;
   --secondary-grey: #8794b8;
 
-  --primary-brand: #4a6cf7;
-  --secondary-brand: #6d7bff;
+  --primary-brand: #FFBD0C;
+  /* --secondary-brand: #6d7bff; */
 
   --success-color: #2ecc71;
   --error-color: #ff4757;
   --warning-color: #ffa700;
-  --info-color: #4a6cf7;
+  --info-color: #FFBD0C;
 }
 .dark:root {
   --primary-white: #0f1729;

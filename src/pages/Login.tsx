@@ -34,7 +34,7 @@ const Login: React.FC = () => {
   return (
     <section className="flex items-center justify-center py-12 px-5">
       <div className="w-full max-w-xl p-6 lg:p-8 bg-primary-white shadow-lg rounded-xl">
-        <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-3 text-primary-text font-playwrite ">
+        <h2 className="text-3xl lg:text-4xl font-semibold text-center mb-3 text-primary-text  ">
           Login
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

@@ -62,7 +62,7 @@ const SignUp: React.FC = () => {
   return (
     <section className="flex items-center justify-center container bg-primary-background py-8 lg:py-10 px-5 mx-auto">
       <div className="w-full max-w-xl p-6 lg:p-8 bg-primary-white shadow-lg rounded-xl">
-        <h2 className="text-2xl lg:text-3xl font-semibold text-center mb-3 text-primary-text font-playwrite">
+        <h2 className="text-2xl lg:text-3xl font-semibold text-center mb-3 text-primary-text ">
           Sign Up
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
