@@ -197,7 +197,31 @@ const AvailableProducts = () => {
                 </div>
               </div>
             ))}
-           
+            {/* {displayedProducts.map((product: any) => (
+              <div
+                key={product._id}
+                className="bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300 border border-gray-200"
+              >
+                <Link to={`/products/${product._id}`} className="block mb-4">
+                  <img
+                    src={product.images[0]}
+                    alt={product.name}
+                    className="w-full h-52 object-contain rounded-md bg-gray-100"
+                  />
+                </Link>
+                <h3 className="text-lg font-bold text-gray-800 mb-2 truncate">
+                  {product.name}
+                </h3>
+                <p className="text-green-600 font-semibold mb-4 text-lg">
+                  ${product.price}
+                </p>
+
+                <div className="flex justify-between gap-3">
+                  <AddToCartButton product={product} />
+                  <CompareButton product={product} />
+                </div>
+              </div>
+            ))} */}
           </div>
         </InfiniteScroll>
       </section>
